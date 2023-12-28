@@ -3,130 +3,27 @@
 <head>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <link id ="CssStyles" rel="stylesheet" type="text/css" href="MainCss_light.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="MainJs.js"></script>
     
-    <title>My first onhover</title>
-    <style>
-        body {
-            background: radial-gradient(circle at top left, #333333, #3d3d40);  
-            margin: 0; 
-            font-family: Arial, sans-serif; 
-            color: #fff; 
-        }
-        .image_gallery {
-            border: black solid 10px;
-            border-radius: 10px;
-        }
-        .popup_img {
-            width: 100%; /* Adjust the width as needed */
-            border-radius: 10px;
-        }
-        .popup_images img {
-            width: 30%; /* Adjust the width of the images inside the popup */
-            border-radius: 10px;
-            margin: 5px 0;
-            align-content: right;
-            float: left;
-        }
-        .img_c1 {
-            width: 24%;
-            border-radius: 10px;
-            opacity: 0.4;
-            margin: 3px;
-            cursor: pointer; /* Add cursor style for better user interaction */
-        }
-        .titel {
-            color: grey; 
-            font-size: 30px;
-            border: 10px grey groove;
-            border-radius: 10px;
-            text-align: center;
-            font-family: Arial;
-            padding: 5px;
-            margin: 20px;
-            width: 300px;
-        }
-        .popup {
-          display: none;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 70%;
-          height: 75%;
-          padding: 20px;
-          background-color: #fff;
-          border: 1px solid #ccc;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          z-index: 1000;
-          border-radius: 10px;
-        }
-        .overlay {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 900;
-        }
-        .popup button {
-            border: gray groove 5px;
-            border-radius: 10px;
-            cursor: pointer;
-            background-color:
-            
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
+    <title>Website</title>
 
-            $(".img_c1").mouseenter(function(){
-                $(this).fadeTo(250, 1);
-            });
-
-            $(".img_c1").mouseleave(function(){
-                $(this).fadeTo(250, 0.4);
-            });
-
-            $(".img_c1").click(function(){
-                openPopup($(this).attr("src"));
-            });
-        });
-
-        function openPopup(imageSrc) {
-          var popup = document.getElementById("popup");
-          var overlay = document.getElementById("overlay");
-          var popupImages = document.getElementById("popupImages");
-          var downloadButton = document.getElementById("downloadButton");
-
-          // Clear previous images
-          popupImages.innerHTML = "";
-
-          // Add the clicked image to the popup
-          var img = document.createElement("img");
-          img.src = imageSrc;
-          popupImages.appendChild(img);
-
-          // Set the download button link
-          downloadButton.href = imageSrc;
-
-          popup.style.display = "block";
-          overlay.style.display = "block";
-        }
-
-        function closePopup() {
-          document.getElementById("popup").style.display = "none";
-          document.getElementById("overlay").style.display = "none";
-        }
-    </script>
 </head>
 <body>
     
     <h1> 
-        <div class="titel" id="titel1"> Bilder mit onhover </div>
+   
+        <div class="title" id="title1">
+            <img id="settings" src="img/settings_menu.png" alt="Settings" onclick="openModePopup()"> Website name <div id="title_buttons">
+                <a href=""> Projects </a>|
+                <a href=""> Forums  </a>|
+                <a href=""> Images  </a>|
+                <a href=""> Videos  </a>|
+                <a href=""> Games  </a>
+            </div>
+        </div>
     </h1>
     
     <h2> </h2>
@@ -138,7 +35,7 @@
         <img class="img_c1" src="img/pc_4.jpg">
     </div>
 
-  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+  <div class="overlay" id="overlay" onclick="closePopups()"></div>
 
     <div class="popup" id="popup">
         <h3>Popup Content</h3>
@@ -148,6 +45,12 @@
             <button>Download Image</button>
         </a>
         <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="popup" id="modePopup">
+        <h3>Settings</h3>
+        <button onclick="changeMode()" id="light_modes">test</button>
+        <button onclick="closeModePopup()">Close</button>
     </div>
 
 </body>
