@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center; /* Center the content */
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px; /* Adjust the gap as needed */
+
+    /* Decorations */
+
+    border: 5px solid;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 70px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.cell:empty {
+    opacity: 0.5;
+}
+.cell:hover:empty{
+    opacity: 1;
+}
+
+#restart {
+    margin-top: 20px; /* Adjust the margin as needed */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    background-color: gray;
+    width: 80px;
+}
+
+#Overlay {
+    opacity: 0.8;
+    background-color: gray;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#Start {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border: 3px blue solid;
+    align-self: right;
+}
+
+.startMenu {
+    display: block;
+}

@@ -3,26 +3,26 @@
 <head>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
-    <link id ="CssStyles" rel="stylesheet" type="text/css" href="MainCss_light.css">
+    <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/MainCss_light.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="MainJs.js"></script>
+    <script src="javascript/MainJs.js"></script>
     
     <title>Website</title>
 
 </head>
 <body>
     
-    <h1> 
-   
+    <h1>    
         <div class="title" id="title1">
-            <img id="settings" src="img/settings_menu.png" alt="Settings" onclick="openModePopup()"> Website name <div id="title_buttons">
-                <a href=""> Projects </a>|
-                <a href=""> Forums  </a>|
-                <a href=""> Images  </a>|
-                <a href=""> Videos  </a>|
-                <a href=""> Games  </a>
-            </div>
+            Website name
+                <div id="title_buttons">
+                    <a href=""> Projects </a>|
+                    <a href=""> Forums  </a>|
+                    <a href=""> Images  </a>|
+                    <a href=""> Videos  </a>|
+                    <a href=""> Games  </a>
+                </div>
         </div>
     </h1>
     
@@ -38,7 +38,7 @@
   <div class="overlay" id="overlay" onclick="closePopups()"></div>
 
     <div class="popup" id="popup">
-        <h3>Popup Content</h3>
+        <h3>Image</h3>
         <div id="popupImages" class="popup_images"></div>
         <p>This is a popup window.</p>
         <a id="downloadButton" download="image.jpg">
@@ -47,10 +47,15 @@
         <button onclick="closePopup()">Close</button>
     </div>
 
-    <div class="popup" id="modePopup">
+    <div class="popup" id="SettingsPopup">
         <h3>Settings</h3>
-        <button onclick="changeMode()" id="light_modes">test</button>
-        <button onclick="closeModePopup()">Close</button>
+        <h4>Appearence</h4>
+        <button onclick="changeSettings()" id="light_modes">test</button>
+        <button onclick="closeSettings()" id="Settings-close">Close</button>
     </div>
 
+    <div class="corners">
+        <img onclick="openSettingsPopup()" class="corBTN" id="settings" src="img/settings.png" alt="settings">
+        <img onclick="" class="corBTN" id="account" src="img/profile.png" alt="acc"> 
+    </div>
 </body>
