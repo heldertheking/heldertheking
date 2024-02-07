@@ -3,7 +3,7 @@
 
 /* Variables & Scrollbar */
 :root {
-    --corBTNsize: 70px;
+    --corBTNsize: 80px;
     scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
     scrollbar-width: thin !important;
     --BgRadiantDefault: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
