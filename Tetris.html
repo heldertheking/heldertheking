@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tetris</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  canvas {
+    border: 2px solid black;
+    background-color: #f0f0f0;
+  }
+</style>
+</head>
+<body>
+<canvas id="tetris" width="300" height="600"></canvas>
+<script>
+  const canvas = document.getElementById('tetris');
+  const context = canvas.getContext('2d');
+
+  const scale = 30;
+  canvas.width = 10 * scale;
+  canvas.height = 20 * scale;
+
+  const board = [];
+  for (let i = 0; i < 20; i++) {
+    board[i] = [];
+    for (let j = 0; j < 10; j++) {
+      board[i][j] = '';
+    }
+  }
+
+  function drawBoard() {
+    for (let i = 0; i < 20; i++) {
+      for (let j = 0; j < 10; j++) {
+        if (board[i][j] !== '') {
+          context.fillStyle = board[i][j];
+          context.fillRect(j * scale, i * scale, scale, scale);
+          context.strokeStyle = '#fff';
+          context.strokeRect(j * scale, i * scale, scale, scale);
+        }
+      }
+    }
+  }
+
+  function draw() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    drawBoard();
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+</script>
+</body>
+</html>
