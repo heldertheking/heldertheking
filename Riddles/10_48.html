@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <link id ="CssStyles" rel="stylesheet" type="text/css" href="Main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="Main.js"></script>
+    <script>
+        function SubAns() {
+            var timeoutId;
+            var answer = document.getElementById('AnsIn').value;
+            if (answer == 0 || answer.toLowerCase() == zero) {
+                correctAns()
+                setTimeout(function() {
+                    window.location.href = `11_${answer}.html`; //redirect only works with `` not with ''
+                }, 500); // Delay of 500 milliseconds (0.5 seconds)
+            } else {
+                wrongAns();
+            }
+        }
+    </script>
+
+    <title>about:blank</title>
+</head>
+<body>
+    <div id="tptCont" style="margin-top: 14%;">
+        <div id="Titel"> <h1>What is that?!</h1> </div>
+        <div id="riddle"> <img id="riddleImage" src="Images/9riddle.png" style="height: 200px;"> </div>
+        <div id="answer"> <button onclick="anspop()">answer</button> </div>
+    </div>
+
+    <div id="ansPop">
+        <h2>Answer</h2>
+        <form id="ansForm">
+            <input id="AnsIn" type="text" placeholder="Answer:"> <button type="button" onclick="SubAns()">Submit</button>
+        </form>
+        <audio id="wrongSound">
+            <source src="audio/wrong.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        <audio id="correctSound">
+            <source src="audio/correct.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+    </div>
+</body>
+</html>

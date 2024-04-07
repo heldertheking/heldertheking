@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+body {
+    size: 200%;
+    background-color: black;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#Titel {
+    text-align: center;
+    margin-top: 40px;
+}
+#Titel h1{
+    width: 400px;
+    margin: auto;
+    color: white;
+}
+
+#play, #tutorial, #answer, #riddle{
+    width: 260px;
+    border: 4px white solid;
+    margin: auto;
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 10px;
+} 
+
+#play a, #tutorial a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#answer button {
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#tptCont {
+    margin-top: 20%;
+}
+
+#ansPop {
+    border: 4px white solid;
+    width: 300px;
+    height: 120px;
+    position: fixed;
+    top: 30px;
+    left: 74%;
+    color: white;
+    display: flex; /* Add flex display to align items */
+    flex-direction: column; /* Align items vertically */
+    border-radius: 10px;
+}
+
+#ansPop h2 {
+    padding: 5px;
+    margin: 0; /* Remove default margin */
+}
+
+#ansForm {
+    padding: 5px;
+}
+
+#ansForm input{
+    background: none;
+    color: white;
+    border: 2px white solid;
+    width: 75%;
+    border-radius: 5px;
+}
+
+#ansForm button {
+    background: none;
+    color: white;
+    border: 2px white solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#riddle {
+    width: fit-content;
+}
+
+#Q {
+    color: red;
+}
+
+#downloadBTN {
+    height: 40px;
+    padding-right: 5px;
+}
