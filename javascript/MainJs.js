@@ -163,5 +163,5 @@ function checkLoginStatus() {
   }
 
 function reflogin() {
-    window.location.href = `login.html`
+    window.location.href = `Login.html`
 }
