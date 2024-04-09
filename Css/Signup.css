@@ -51,7 +51,8 @@ h1 {
 }
 
 #signup_submit,
-#login_redirect {
+#login_redirect,
+#back {
   background-color: rgb(243, 243, 243);
   border: none;
   appearance: a;
@@ -61,7 +62,7 @@ h1 {
   color: black;
   padding: 5px; /* Adjust padding as needed */
   max-width: 200%;
-  width: 30%;
+  width: 25%;
   font-size: 23px;
   cursor: pointer;
   margin-left: auto;
@@ -70,7 +71,8 @@ h1 {
   box-shadow: 1px 1px 7px black;
 }
 
-#login_href {
+#login_href,
+#back_href {
   text-decoration: none;
   color: black;
 }
@@ -80,7 +82,8 @@ h1 {
 }
 
 #signup_submit:hover,
-#login_href:hover {
+#login_href:hover,
+#back_href:hover {
   transition: color .3s;
   color: gray;
 }

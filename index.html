@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/MainCss_light.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="javascript/MainJs.js"></script>
+    
+    <title>Website</title>
+
+</head>
+<body>
+    
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="">Games</a></li>
+        <li><a href="">Images/videos</a></li>
+        <li><a href="">Forums</a></li>
+    </ul> 
+    
+    <h2> </h2>
+    
+    <div class="image_gallery">
+        <img class="img_c1" src="img/pc_1.jpg"> 
+        <img class="img_c1" src="img/pc_2.jpg">
+        <img class="img_c1" src="img/pc_3.jpg">
+        <img class="img_c1" src="img/pc_4.jpg">
+    </div>
+
+  <div class="overlay" id="overlay" onclick="closePopups()"></div>
+
+    <div class="popup" id="popup">
+        <h3>Image</h3>
+        <div id="popupImages" class="popup_images"></div>
+        <p>This is a popup window.</p>
+        <a id="downloadButton" download="image.jpg">
+            <button>Download Image</button>
+        </a>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="popup" id="SettingsPopup">
+        <h3>Settings</h3>
+        <h4>Appearence</h4>
+        <button onclick="changeSettings()" id="light_modes">test</button>
+        <button onclick="closeSettings()" id="Settings-close">Close</button>
+    </div>
+
+    <div class="corners">
+        <img onclick="openSettingsPopup()" class="corBTN" id="settings" src="img/settings.png" alt="settings">
+        <img onclick="reflogin()" class="corBTN" id="account" src="img/profile.png" alt="acc"> 
+    </div>
+</body>

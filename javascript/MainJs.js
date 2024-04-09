@@ -161,3 +161,7 @@ function checkLoginStatus() {
         console.error('Error:', error);
       });
   }
+
+function reflogin() {
+    window.location.href = `login.html`
+}
