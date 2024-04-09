@@ -16,6 +16,7 @@ body {
     margin: none; 
     font-family: Arial, sans-serif; 
     color: #3a3a3a;
+    transition: color 0.5s;
     height: 500vh;
 }
 
@@ -23,7 +24,8 @@ body.dark-mode {
     background: var(--BgRadiantDark);
     margin: none; 
     font-family: Arial, sans-serif; 
-    color: #fff; 
+    color: #fff;
+    transition: color 0.5s;
 }
 
 ul {
