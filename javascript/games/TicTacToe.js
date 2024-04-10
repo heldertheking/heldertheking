@@ -12,6 +12,9 @@ function resetGame() {
     gameActive = true;
     renderBoard();
     document.getElementById('restart').style.display = 'none';
+    $("#board").css("border-color", "black");
+    $("#board").css("box-shadow", "3px 3px 7px black");
+    $('#winner').html(``)
 }
 
 function checkWinner() {
@@ -44,8 +47,18 @@ function handleClick(index) {
     renderBoard();
     
     if (checkWinner()) {
+        if (currentPlayer == 'X') {
+            $("#board").css("border-color", "red");
+            $("#board").css("box-shadow", "3px 3px 7px #B00103");
+            $('#winner').html(`Player ${currentPlayer} Won!`)
+        } else if (currentPlayer == 'O') {
+            $("#board").css("border-color", "#00EE00");
+            $("#board").css("box-shadow", "3px 3px 7px #028E02");
+            $('#winner').html(`Player ${currentPlayer} Won!`)
+        } else {
+            alert("Invalid Player!")
+        }
         alert(`Player ${currentPlayer} wins!`);
-        $("#board").css("border-color", "red");
         showRestart();
         gameActive = false;
     } else if (checkDraw()) {
@@ -71,4 +84,10 @@ function showRestart() {
 
 function StartSeq() {
     document.querySelectorAll(".startMenu").forEach(a=>a.style.display = "none");
+    $(`#board`).animate({ marginLeft: 0},{queue:false}, 700);
+    
+}
+
+function back() {
+    window.location.href = 'index.html'
 }
