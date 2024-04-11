@@ -24,7 +24,7 @@ body.dark-mode {
     background: var(--BgRadiantDark);
     margin: none; 
     font-family: Arial, sans-serif; 
-    color: #fff;
+    color: #e60000;
     transition: color 0.5s;
 }
 
@@ -34,7 +34,6 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    width: 120%
 }
   
 li {
