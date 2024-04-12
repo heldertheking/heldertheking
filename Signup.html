@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/Signup.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <title>Signup</title>
 </head>
 <body>
+    <div id="socialMedia">
+        <img src="icons/discord.ico" class="Signup_icons">
+        <img src="icons/instragram.ico" class="Signup_icons">
+        <img src="icons/twitter-x.ico" id="logo-x" class="Signup_icons">
+    </div> 
     <div id="signup_from">
         <h1>Sign up</h1>
         <form method="post" action="">
@@ -20,6 +27,23 @@
             
             <div id="buttons"> <button id="signup_submit"> Sign up </button> <button id="back" > <a id="back_href" href="index.html"> back </a></button> <button id="login_redirect" > <a id="login_href" href="Login.html"> Log in </a></button> </div>
         </form>
-    </div>    
+        <img onclick="socials()" src="icons/arrow.ico" id="arrow_icon">
+    </div>  
 </body>
+    <script> 
+        var i = true;
+        function socials() {
+            if (i) {
+                $('#socialMedia').animate({right: '37%'}, 700);
+                $('#arrow_icon').animate({rotate: '180deg'}, 700);
+                $('#socialMedia').toggleClass('shadow-effect');
+                i = false;
+            } else if (i == false) {
+                i = true;
+                $('#socialMedia').animate({right: '41%'}, 700);
+                $('#arrow_icon').animate({rotate: '0deg'}, 700);
+                $('#socialMedia').toggleClass('shadow-effect');
+            }
+        }
+    </script>
 </html>

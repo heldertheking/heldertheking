@@ -25,11 +25,48 @@ h1 {
   margin: auto;
   position: absolute;
   top: 0; bottom: 0; /* Center vertically */
-  left: 0; right: 0; /* Center horizontally */
+  right: 40%; /* Shifted to the left to accommodate social media icons */
   box-sizing: border-box;
   box-shadow: 3px 3px 10px gray;
 }
 
+#socialMedia {
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0xp 0px 0px transparent;
+  width: 150px; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  position: absolute;
+  top: 0; bottom: 0; /* Center vertically */
+  right: 41%; /* Aligned to the right */
+  margin: auto;
+  display: grid;
+  transition: box-shadow 700ms;
+}
+.shadow-effect {
+  box-shadow: 3px 3px 10px gray;
+}
+
+.Signup_icons {
+  width: 50px;
+  padding: 5px;
+  margin-left: 55%;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#logo-x {
+  width: 55px;
+}
+#arrow_icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  cursor: pointer;
+  rotate: 0deg;
+}
 .signup_input {
   background-color: rgb(233, 233, 233);
   padding: 5px;

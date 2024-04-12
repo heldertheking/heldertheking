@@ -95,3 +95,18 @@ h1 {
   margin-top: 20px;
   padding: 5px;
 }
+
+.login_icons {
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+}
+#logo-x {
+  width: 55px;
+}
+#icons {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 45px;
+}

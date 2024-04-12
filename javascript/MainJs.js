@@ -163,5 +163,5 @@ function checkLoginStatus() {
   }
 
 function reflogin() {
-    window.location.href = `https://heldertheking.com/Login`
+    window.location.href = `login.html`
 }
