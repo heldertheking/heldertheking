@@ -87,7 +87,6 @@ body {
 }
 
 #container h2{
-    position: absolute;
-    top: 25%;
-    left: 47%;
+    position: fixed;
+    align-self: center;
 }
