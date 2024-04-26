@@ -77,16 +77,17 @@ body {
 #restart {
     width: fit-content;
     background-color: whitesmoke;
-    left: 46.7%;
-    top: 72%;
+    left: 34%;
     box-shadow: rgb(0, 0, 0) 3px 3px 7px;
     display: none;
+    position: relative;
 }
 .startMenu {
     display: block;
 }
 
-#container h2{
+#winner {
     position: fixed;
     align-self: center;
+    top: 0%;
 }

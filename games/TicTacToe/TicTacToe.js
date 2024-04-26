@@ -3,7 +3,7 @@ $(document).ready(function(){
 })
 let currentPlayer = 'X';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
-let gameActive = true;
+let gameActive = false;
 
 // Reset the game state
 function resetGame() {
@@ -58,12 +58,11 @@ function handleClick(index) {
         } else {
             alert("Invalid Player!")
         }
-        alert(`Player ${currentPlayer} wins!`);
         showRestart();
         gameActive = false;
     } else if (checkDraw()) {
-        alert('It\'s a draw!');
         $("#board").css("border-color", "blue");
+        $('#winner').html('It\'s a draw!')
         showRestart();
         gameActive = false;
     } else {
@@ -85,7 +84,7 @@ function showRestart() {
 function StartSeq() {
     document.querySelectorAll(".startMenu").forEach(a=>a.style.display = "none");
     $(`#board`).animate({ marginLeft: 0},{queue:false}, 700);
-    
+    gameActive = true
 }
 
 function back() {
