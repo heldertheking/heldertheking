@@ -11,7 +11,7 @@ function resetGame() {
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     gameActive = true;
     renderBoard();
-    document.getElementById('restart').style.display = 'none';
+    $('#res-back-container').css("display", "none");
     $("#board").css("border-color", "black");
     $("#board").css("box-shadow", "3px 3px 7px black");
     $('#winner').html(``)
@@ -78,18 +78,14 @@ function renderBoard() {
 }
 
 function showRestart() {
-    document.getElementById('restart').style.display = 'block';
+    $('#res-back-container').css("display", "flex");
 }
 
 function StartSeq() {
     $('#Start').css("display", "none");
     $('#Overlay').css("display", "none");
-    $(`#board`).animate({ marginLeft: 0},{queue:false}, 700);
-    $('#Back').animate({
-          left: '.5vw',
-          top: '0px',
-          marginTop: '.5vw',
-        }); 
+    $('#Back').css("display", "none");
+    $(`#board`).animate({ marginLeft: 0},{queue:false}, 700); 
     gameActive = true
 }
 
