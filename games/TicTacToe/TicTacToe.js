@@ -82,8 +82,14 @@ function showRestart() {
 }
 
 function StartSeq() {
-    document.querySelectorAll(".startMenu").forEach(a=>a.style.display = "none");
+    $('#Start').css("display", "none");
+    $('#Overlay').css("display", "none");
     $(`#board`).animate({ marginLeft: 0},{queue:false}, 700);
+    $('#Back').animate({
+          left: '.5vw',
+          top: '0px',
+          marginTop: '.5vw',
+        }); 
     gameActive = true
 }
 
