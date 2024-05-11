@@ -136,15 +136,6 @@ function changeSettings() {
     });
 }
 
-document.addEventListener("mousemove", function (e) {
-    // Calculate the percentage position based on mouse coordinates
-    var mouseX = e.clientX / window.innerWidth * 100;
-    var mouseY = e.clientY / window.innerHeight * 100;
-
-    // Set the background-position property
-    document.body.style.backgroundPosition = mouseX + "% " + mouseY + "%";
-});
-
 // Check if user is logged in
 
 function checkLoginStatus() {
@@ -165,3 +156,13 @@ function checkLoginStatus() {
 function reflogin() {
     window.location.href = `login.html`
 }
+
+let lastPosition = 0
+window.addEventListener("scroll",(event) => {
+    if (window.scrollY < lastPosition) {
+        $('#navBar').css({transform: "translateY(0px)"});
+    } else {
+        $('#navBar').css({transform: "translateY(-50px)"});
+    }
+    lastPosition = window.scrollY 
+});

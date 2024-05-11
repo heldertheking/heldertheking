@@ -13,15 +13,15 @@
 </head>
 <body>
     
-    <ul>
+    <ul id="navBar">
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="game.html">Games</a></li>
+        <li><a href="#projectSection">Projects</a></li>
+        <li><a href="#gameSection">Games</a></li>
         <li><a href="">Images/videos</a></li>
         <li><a href="">Forums</a></li>
     </ul> 
     
-    <h2> </h2>
+    <div id="navBarPlaceholder"></div>
     
     <div class="image_gallery">
         <img class="img_c1" src="img/pc_1.jpg"> 
@@ -53,4 +53,53 @@
         <img onclick="openSettingsPopup()" class="corBTN" id="settings" src="img/settings.png" alt="settings">
         <img onclick="reflogin()" class="corBTN" id="account" src="icons/profile.ico" alt="acc">
     </div>
+
+
+    <!-- Project -->
+    <section id="projectSection">
+        <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/projects.css">
+        <div class="pro-container"> 
+            <div class="projects" id="project1">
+                <div class="titleProject"> <h3>Enigma Stories</h3> </div>
+                <div class="text"> <p> it's a short Riddle Game with a self written story at the end</p> </div>
+                <div class="href"> <a href="Riddles/index.html"> heldertheking.com/Riddles </a> </div>
+            </div>
+        </div>
+        <div class="pro-container"> 
+            <div class="projects" id="project2">
+                <div class="titleProject"> <h3>The Twin Vaults</h3> </div>
+                <div class="text"> <p> Product listing Page</p> </div>
+                <div class="href"> <a href="ttv.heldertheking.com"> ttv.heldertheking.com </a> </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Games -->
+    <section id="gameSection">
+        <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/game.css">
+        <div class="game-container"> 
+            <div class="games" id="game1">
+                <div class="titleGame"> <h3>Enigma Stories</h3> </div>
+                <div class="text"> <p> it's a short Riddle Game with a self written story at the end</p> </div>
+                <div class="href"> <a href="Riddles/index.html"> heldertheking.com/Riddles </a> </div>
+            </div>
+            <div class="games" id="game2">
+                <div class="titleGame"> <h3>TicTacTie</h3> </div>
+                <div class="text"> <p> it's a selfmade HTML, CSS, Javascript TicTacToe</p> </div>
+                <div class="href"> <a href="games/TicTacToe/index.html"> heldertheking.com/TicTacToe </a> </div>
+            </div>
+            <div class="games" id="game3">
+                <div class="titleGame"> <h3>Tetris</h3> </div>
+                <div calss="text"> <p> it's a selfmade HTML, CSS, Javascript Tetris clone</p> </div>
+                <div class="href"> <a href="games/tetris/index.html"> heldertheking.com/games/tetris </a> </div>
+            </div>
+            <div class="games" id="game4">
+                <div class="titleGame"> <h3>2048</h3> </div>
+                <div class="text"> <p> A simple clone of the game 2048</p> </div>
+                <div class="href"> <a href="games/2048/index.html"> heldertheking.com/TicTacToe </a> </div>
+            </div>
+    
+        </div>
+    </section>
 </body>

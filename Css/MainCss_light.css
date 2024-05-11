@@ -10,14 +10,20 @@
     --BgRadiantDark: linear-gradient(315deg, #6e6e6e, #686868);
 }
 
+html {
+    scroll-behavior: smooth;
+    padding: 0;
+}
+
 /* Main Body */
 body {
     background: var(--BgRadiantDefault); 
-    margin: none; 
     font-family: Arial, sans-serif; 
     color: #3a3a3a;
     transition: color 0.5s;
     height: 500vh;
+    padding: 0;
+    margin: 0;
 }
 
 body.dark-mode {
@@ -34,8 +40,12 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    width: 100%;
+    transition: transform 0.25s;
+    top: 0px;
 }
-  
+
 li {
     float: left;
 }
@@ -50,50 +60,11 @@ li a {
   
   /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #000000;
 }
 
-/* Titel and Titel buttons/images */
-.title {
-    color: white; 
-    font-size: 45px;
-    background-color: rgb(160, 160, 160);
-    text-align: left;
-    font-family: Arial;
-    padding: 10px;
-    margin-top: -22px;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-#title_buttons {
-    margin-right: 20px;
-}
-#title_buttons {
-    display: flex;
-    background-color: #ccc;
-    width: fit-content;
-    align-items: right;
-    border-radius: 15px;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 30px;
-    margin: 3px;
-    margin-left: auto;
-}
-#title_buttons a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 30px;
-    margin: 3px;
-    margin-right: 1px;
-}
-#title_buttons a:hover {
-    color: rgb(124, 122, 122);
-    text-decoration: none;
-    font-size: 30px;
+#navBarPlaceholder {
+    margin-bottom: 47px;
 }
 
 /* Popup windows */

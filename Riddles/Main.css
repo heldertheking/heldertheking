@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-#play, #tutorial, #answer, #riddle{
+#play, #tutorial, #back, #answer, #riddle{
     width: 260px;
     border: 4px white solid;
     margin: auto;
@@ -29,7 +29,7 @@ body {
     border-radius: 10px;
 } 
 
-#play a, #tutorial a{
+#play a, #tutorial a, #back a{
     color: white;
     text-decoration: none;
     cursor: pointer;

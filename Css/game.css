@@ -1,8 +1,9 @@
 .game-container {
     width: 100%;
     height: 10%;
-    padding: 10px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .games {
@@ -14,16 +15,18 @@
     margin: 5px;
 }
 
-.games a{
-    color: aqua;
-}
-#p1-title, #p1-href, #p1-title {
+.titleGame, .href, .text {
     display: flex;
 }
 
-.game-container h3, p, a {
+.game-container h3, .game-container p, .game-container a {
     color: whitesmoke;
     text-align: center;
     text-decoration: none;
-    margin: 20px auto auto auto;
+    width: 100%;
+}
+
+.games a{
+    color: aqua;
+    text-decoration: underline;
 }
