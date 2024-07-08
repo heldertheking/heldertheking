@@ -77,7 +77,6 @@ ul {
     align-items: center;
     justify-content: center;
     transition: right 1.5s ease, background-color 1s ease;
-
 }
 
 ul:hover {
@@ -121,7 +120,7 @@ li a:hover {
 /* Section (Intro, Programm, Video, Credits) */
 .sections {
     background-color: var(--chalk);
-    min-height: 200px;
+    min-height: 50px;
     height: fit-content;
     width: calc(90% - 100px);
     padding: 20px;
@@ -150,7 +149,6 @@ h1 {
 
 #moVideo {
     width: 100%;
-
 }
 
 /* Separator beetwen Video & Credits */
@@ -218,15 +216,21 @@ h1 {
 .bottom_left_corner_radius{
     border-radius: 0 0 0 15px;
 }
+/* Developer Thanks Section */
+#dev_thx {
+    height: fit-content;
+}
 
+#dev_thx p {
+    font-family: var(--font2);
+}
 /* Small Details*/
-
 .main_organizer{
     background-color: var(--accent2);
     border-radius: 15px;
 }
 
-#link_anundpfirsisch {
+.link {
     color: var(--accent3);
     text-decoration: none;
     padding: 4px;
@@ -234,7 +238,72 @@ h1 {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-#link_anundpfirsisch:hover {
+.link:hover {
     background-color: var(--accent2);
     color: var(--night);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        width: 100%;
+        height: auto;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: bottom 1.5s ease, background-color 1s ease;
+    }
+    ul:hover {
+        right: auto;
+        bottom: 0;
+        padding-left: 0;
+    }
+    li {
+        margin: 0;
+        text-align: center;
+    }
+    li a {
+        padding: 10px 0;
+        border-radius: 0;
+        height: auto;
+    }
+
+    .sections {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .intro_text, .programm_text {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .group-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group_divs {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    #Programm h2 {
+        font-size: 24px;
+    }
+
+    .credits h2 {
+        font-size: 20px;
+    }
+
+    .credits h3 {
+        font-size: 18px;
+    }
 }
