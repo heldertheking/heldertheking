@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <link rel="icon" href="ico/theater.ico" type="image/icon type">
+    <title>Theater 2024</title>
+</head>
+<body>
+    <ul id="navBar" class="column">
+        <li><a class="navText centered" href="?#Intro"><img class="icons" src="ico/intro.ico">   Intro</a></li>
+        <li><a class="navText centered" href="?#Programm"><img class="icons" src="ico/programm.ico">   Programm</a></li>
+        <li><a class="navText centered" href="?#MO"><img class="icons" src="ico/mo.ico">   Making-Of</a></li>
+        <li><a class="navText centered" class="active" href="?#Credits"><img class="icons" src="ico/credits.ico">  Credit</a></li>
+    </ul>
+
+    <section class="sections column" id="Intro">
+        <h1> Lagahla Gala </h1>
+        <p class="centered intro_text">
+            Herzlich willkommen zum Theaterprojekt der 3.Sek! <br><br>
+            Unsere Lehrer haben dieses Projekt ins Leben gerufen, um uns die Möglichkeit zu geben, unsere kreativen Fähigkeiten zu entdecken und weiterzuentwickeln. Dieses Theaterprojekt steht für einen gemeinsamen Abschluss als Jahrgang da.
+            Wir durften unsere Gruppen aussuchen, in denen wir Requisiten, Tanz Choreos und Inhalt des Theaters selbst ausgearbeitet haben.
+            Wir sind stolz auf unsere harte Arbeit und was dabei rausgekommen ist.<br><br> Wir freuen uns Ihnen präsentieren zu dürfen, was wir in diesen zwei ein halb Wochen Zusammenarbeit erstellt haben.<br><br> Wir wünschen Ihnen viel Vergnügen bei der Vorstellung!
+        </p>
+    </section>
+    <section class="sections column" id="Programm">
+        <p class="centered programm_text">Unser Theaterstück thematisiert verschiedene Situationen, die sowohl innerhalb als auch außerhalb des Flughafens Zürich stattfinden. Es handelt von Menschen, die am Zürich Flughafen zahlreiche unterschiedliche Erlebnisse haben. Dieses Theaterstück wird durch eine Vielzahl von Liedern und sportlichen Darbietungen begleitet.</p>
+    </section>
+    <section class="sections" id="MO">
+        <video id="moVideo" controls>
+            <source src="video/moVid.mp4" type="video/mp4">
+            <source src="video/moVid.ogg" type="video/ogg">
+            <source src="video/loading.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </section>
+    <div id="separator"></div>
+    <section class="sections" id="Credits">
+        <div class="credits column">
+            <h2>Organisatoren</h2>
+            <div class="group-container">
+                <div class="centered column">
+                    <p class="main_organizer" title="Hauptorganisatorin">V. Grob</p> 
+                    <p>D. Büchel</p>
+                    <p>N. Tschanz</p>
+                    <p>Z. Lenhard</p>
+                    <p>S. Silva</p> 
+                </div>
+                <div class="centered column">
+                    <p class="main_organizer" title="Hauptorganisatorin">N. Fischer</p>
+                    <p>O. Dimiri</p> 
+                    <p>C. Brink</p>
+                    <p>F.Oertle</p>
+                    <p>M. Kindlimann</p>
+                </div>
+                <div class="centered column">
+                    <p class="main_organizer" title="Hauptorganisatorin">C. Petrachi</p>
+                    <p>R. Keller</p>
+                    <p>C. Ebesle</p>
+                    <p>M. Hofmann</p>
+                    <p>K. Wulff</p>
+                </div>
+            </div>
+            <h3>Spezielen Dank an:</h3>
+            <p> Niggi von <a id="link_anundpfirsisch" href="https://pfirsi.ch/?gad_source=1&gclid=Cj0KCQjws560BhCuARIsAHMqE0Fa_gwwgVRQSH6WfE3-Bzo1ADZNgYqm8Lq1kZVi03DViTjAZ0utli8aAjpwEALw_wcB">anundpfirsich</a></p>
+            
+            <h2>Gruppen</h2>
+            <div class="group-container">
+                <div id="group_music" class="group_divs group_div_left">
+                    <h3>Musik</h3>
+                    <p>Elishama</p> <p>Luana</p> <p>Feride</p> <p>Sara</p> <p>Oceane</p>
+                    <p>Anna</p> <p>Louis</p> <p>Jordani</p> <p>Loreta</p> <p>Thierry</p>
+                </div>
+                <div id="group_statist" class="group_divs bottom_left_corner_radius">
+                    <h3>Statisten</h3>
+                    <p>Hélder</p> <p>Yanis</p> <p>Linus</p> <p>Raphi</p> <p>Luca</p>
+                    <p>Mohamed</p> <p>Maria Mo</p> <p>Aylin</p> <p>Yves</p>
+                    <p>Tim</p> <p>Chris</p> <p>Jamie</p> <p>Colin</p> <p>Lydia</p>
+                    <p>Matteo</p> <p>Diana</p> <p>Artem</p> <p>Micael</p> <p>Jan</p> 
+                </div>
+                <div id="group_theater" class="group_divs group_div_middle">
+                    <h3>Theater</h3>
+                    <p>Mila</p> <p>Mateo</p> <p>Adonis</p> <p>Severin</p>
+                    <p>Prashan</p> <p>Yori</p> <p>Leo</p> <p>Gian</p> <p>Enis</p>
+                    <p>Lynn</p> <p>Omar</p> <p> Marlon</p> <p>Jilly</p>
+                    <p>Nele</p> <p>Nina</p> <p>Emilia</p> <p>Mia</p> <p>Fabiola</p>
+                    <p>Sascha</p> <p>Sarina</p> <p>Siria</p> <p>Tabea</p> <p>Nevin</p>
+                    <p>Salvatore</p> <p>Julian</p> <p>Elias</p>
+                </div>
+                <div id="group_sport" class="group_divs bottom_right_corner_radius">
+                    <h3>Sport</h3>
+                    <p>Aidan</p> <p>Gabriel</p> <p>Theo</p> <p>Ilyas</p> <p>Luca</p>
+                    <p>Raphael</p> <p>Sara</p> <p>Aurelia</p> <p>Enis</p> <p>Michael</p>
+                    <p>Boaz</p> <p>Denis</p> <p>Elija</p> <p>Noe</p> <p>Yuriy</p>
+                </div>
+                <div id="group_dance" class="group_divs group_div_right">
+                    <h3>Tanz</h3>
+                    <p>Havin</p> <p>Lina</p> <p>Eldina</p> <p>Shana</p> <p>Anisa</p>
+                    <p>Neela</p> <p>Rebeka</p> <p>Hana</p> <p>Ezona</p> <p>Camila</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

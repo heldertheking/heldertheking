@@ -1,0 +1,240 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gagalin');
+
+/* Color 
+#21356b blue
+#e5e9ea white
+#252626 black
+#3b60c4 accent
+#6289f5 accent2
+#7e8fbe accent3
+#cdd1d2 accent4
+*/
+
+:root {
+    scroll-behavior: smooth;
+    /* Colors */
+    --blue: #21356b;
+    --accent: #3b60c4;
+    --accent2: #6289f5;
+    --accent3: #7e8fbe;
+    --night: #252626; 
+    --chalk: #e5e9ea;
+    --accent4: #cdd1d2;
+    /* Fonts */
+    --font1: 'Gagalin', sans-serif;
+    --font2: 'Madimi One', sans-serif;
+}
+
+::-webkit-scrollbar  {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font1);
+    background-color: var(--blue);
+    scrollbar-width: none;
+}
+
+/* Alignment Tools */
+.centered/*, .credits p */{
+    margin: auto;
+    padding: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.active {
+    background-color: var(--accent);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: -105px;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    transition: right 1.5s ease, background-color 1s ease;
+
+}
+
+ul:hover {
+    right: 0px;
+    color: var(--night);
+    background-color: var(--blue);
+    padding-left: 10px;
+}
+
+li {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+li:last-child {
+    margin-top: auto;
+}
+
+li a {
+    font-family: var(--font2);
+    display: block;
+    color: var(--night);
+    text-decoration: none;
+    padding: 0px 0px 0px;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 0 0 10px;
+    height: 55px;
+}
+
+li a:hover {
+    background-color: var(--accent);
+}
+
+.icons {
+    width: 40px;
+}
+
+/* Section (Intro, Programm, Video, Credits) */
+.sections {
+    background-color: var(--chalk);
+    min-height: 200px;
+    height: fit-content;
+    width: calc(90% - 100px);
+    padding: 20px;
+    margin: 0 50px 0 50px;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-family: var(--font1);
+    margin: 0 auto 0 auto;
+    font-size: min(10vw, 70px);
+}
+
+.intro_text, .programm_text {
+    width: 60%;
+    text-align: center;
+    font-size: 18px;
+}
+
+#Programm h2 {
+    font-family: var(--font1);
+    font-size: 30px;
+    text-align: center;
+}
+
+#moVideo {
+    width: 100%;
+
+}
+
+/* Separator beetwen Video & Credits */
+#separator{
+    border: 2px var(--accent4) dashed;
+    background-color: var(--chalk);
+}
+
+.credits {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.credits p {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-family: var(--font2);
+}
+
+.credits h3, .credits h2 {
+    font-family: var(--font1);
+    text-align: center;
+}
+
+.credits h2 {
+    width: 100%;
+    background-color: var(--accent);
+}
+
+/* Group Divs for alignment */
+.group_divs{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    margin: 10px;
+    height: fit-content;
+    background-color: var(--accent3);
+    border: 2px var(--night) solid;
+}
+
+.group-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.group_div_middle {
+    border-radius: 0 0 15px 15px;
+}
+.group_div_left{
+    border-radius: 15px 0 0 15px;
+}
+
+.group_div_right{
+    border-radius: 0 15px 15px 0;
+}
+
+.bottom_right_corner_radius{
+    border-radius: 0 0 15px 0;
+}
+
+.bottom_left_corner_radius{
+    border-radius: 0 0 0 15px;
+}
+
+/* Small Details*/
+
+.main_organizer{
+    background-color: var(--accent2);
+    border-radius: 15px;
+}
+
+#link_anundpfirsisch {
+    color: var(--accent3);
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#link_anundpfirsisch:hover {
+    background-color: var(--accent2);
+    color: var(--night);
+}
