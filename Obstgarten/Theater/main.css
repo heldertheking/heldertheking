@@ -217,11 +217,11 @@ h1 {
     border-radius: 0 0 0 15px;
 }
 /* Developer Thanks Section */
-#dev_thx {
+.dev_thx {
     height: fit-content;
 }
 
-#dev_thx p {
+.dev_thx p {
     font-family: var(--font2);
 }
 /* Small Details*/
