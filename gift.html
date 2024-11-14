@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present</title>
+</head>
+<body>
+    <div class="letter" onclick="openLetter()">
+        <svg id="letter_svg" width="600" height="360" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background rectangle with white fill and rounded corners -->
+            <rect x="1" y="1" width="98" height="58" rx="8" ry="8" fill="white" stroke="#000" stroke-width="2"/>
+            <!-- Top fold line with rounded corners -->
+            <polyline points="4,3 50,30 96,3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+            <!-- Bottom left and right fold lines with rounded corners f0f0f0-->
+            <polyline points="4,56 50,30 96,56" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div id="text">
+            Ich hoff das dir die site gfallt, ich han mir zwar nöd bsundrigs viel mühe geh aber sie chunt trotzdem von ganzem herze. <br>
+            Ich hett vlt chli meh und vorallem anderi sache chöne da ine schriibe aber ich han nöd gwüsst was und wie ich das jetzt mache söll. <br><br>
+
+            Ich han dir mit dem chline gschenk eig welä zeige das ich du mir wichtig bisch und zwar so wichtig das ich mich extra an pc setzt um so öpis code <br><br>
+
+            Ich bin nöd so guet i so brief schriibe, wie du es vlt gmerkt hesch, aber trotzdem hoffi das dir de brief gfalle het und ich hoff das er dir vlt au es lächle is gsicht bracht het.
+        </div>
+    </div>
+
+    <div></div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(231, 242, 252);
+        display: flex;
+        justify-content: center;
+    }
+
+    .letter {
+        position: absolute;
+        top: calc(50% - 180px);
+        width: 600;
+        height: 360;
+    }
+
+    #text {
+        position: relative;
+        display: none;
+        opacity: 0;
+        transition: opacity 1 ease-in-out;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .letter svg, .letter {
+            width: 300px; /* Adjust the width as needed */
+            height: 180px; /* Adjust the height proportionally */
+        }
+    }
+
+    /* Additional media query for very small screens */
+    @media (max-width: 480px) {
+        .letter svg, .letter {
+            width: 200px;
+            height: 120px;
+        }
+    }
+</style>
+
+<script>
+    function openLetter() {
+        const letterSVG = document.getElementById("letter_svg");
+        letterSVG.style.display = "none";
+
+        const letterText = document.getElementById("text");
+        letterText.style.display = "block"
+        letterText.style.opacity = 1.0
+    }
+</script>
+</html>
