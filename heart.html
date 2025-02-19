@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Heart Background</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgb(185, 235, 248);
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        #heartPath {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+
+        .question, .buttons, .answer {
+            z-index: 20;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            transition: opacity 1s ease;
+        }
+
+        .question, .answer {
+            top: 40%;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+
+        .buttons {
+            top: 50%;
+        }
+
+        .button {
+            font-size: 20px;
+            padding: 10px 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid #333;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .answer {
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="background-container" id="container">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="heartPath" d="M100 170
+                     C 130 130, 180 100, 160 50
+                     C 140 10, 100 30, 100 60
+                     C 100 30, 60 10, 40 50
+                     C 20 100, 70 130, 100 170"
+              stroke="red"
+              stroke-width="4"
+              fill="none"
+              stroke-linecap="round">
+        </path>
+    </svg>
+</div>
+
+<div class="question" id="question_container">
+    <p>Do you love me?</p>
+</div>
+
+<div class="answer" id="answer_container">
+    <p>I love you too!</p>
+</div>
+
+<div class="buttons" id="button_container">
+    <button class="button" id="yesButton">Yes!</button>
+    <button class="button" id="noButton">No...</button>
+</div>
+
+<script>
+    function showHeart() {
+        let path = document.getElementById("heartPath");
+        path.style.transition = "stroke-dashoffset 4s ease-in-out";
+        path.style.strokeDashoffset = "0";
+
+        let buttons_container = document.getElementById("button_container");
+        buttons_container.style.opacity = "0";
+
+        let question_container = document.getElementById("question_container");
+        question_container.style.opacity = "0";
+
+        let answer_container = document.getElementById("answer_container");
+        answer_container.style.opacity = "1";
+
+        setTimeout(() => {
+                buttons_container.style.display = "none";
+                question_container.style.display = "none";
+            }, 1000
+        )
+    }
+
+    const yesButton = document.querySelector('#yesButton');
+    const noButton = document.querySelector('#noButton');
+
+    yesButton.addEventListener('click', () => {
+        showHeart();
+    })
+
+    noButton.addEventListener('mouseenter', () => {
+        noButton.innerText = 'Yes!'
+        noButton.addEventListener('click', () => showHeart())
+    });
+    noButton.addEventListener('mouseleave', () => {
+        noButton.innerText = 'No...'
+        noButton.removeEventListener('click', () => showHeart())
+    });
+</script>
+
+</body>
+</html>
