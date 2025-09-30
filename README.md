@@ -47,3 +47,7 @@ Because every project is an adventure, and I bring creativity, curiosity, and a 
 
 > Connect with me, challenge me, or just say hi!  
 > I’m always up for a new quest. 🎲✨
+
+---
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
