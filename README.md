@@ -1,53 +1,73 @@
-# 👋 Hey there, I’m Helder!
+# React + TypeScript + Vite
 
-## 🧑‍💻 Who Am I?
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-I’m a passionate, self-taught software developer and proud “Jack of All Trades” — not just a coder, but a digital explorer! Whether it’s building slick HTML webpages, complex full-stack apps with Angular & Spring Boot, or crafting immersive Unity games, I love the thrill of creation. My toolkit is as diverse as my projects, and I thrive on finding clever solutions to any challenge. ⚡️
+Currently, two official plugins are available:
 
-## 🔥 My Main Powers
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- 🅰️ Angular, ☕ Java, ⚡️ JavaScript — my “main quest” heroes!
-- 🔥 Spring Boot, ⚙️ Electron, 💻 Raw JS, 🐍 Python — my trusty sidekicks.
-- 🎮 Unity & C# — leveling up in game dev.
-- 💾 C++, 🐘 PHP, 🌐 HTML/CSS — always ready in my backpack.
-- ☁️ Cloudflare advocate — because fast and secure is the only way!
-- 🔗 Libraries I vibe with: JsSoup, CustomTKinter, QT, Flask, and more.
+## React Compiler
 
-## 🚀 Projects That Make Me Proud
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **ExoByte Core** — my home base for innovation.
-- **cube.js** — Lightweight 3D animated cube
-- **J.R.E.** — a JavaScript rendering engine (currently in early Stages).
-- **Merged Music Player** — because tunes make everything better.
-- **heldertheking.com** — my digital HQ!  
-- Find me on Instagram, YouTube (HTK), Steam, Epic Games, Facebook — let’s connect!
+## Expanding the ESLint configuration
 
-## 🤖 Fun Fact
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-I taught myself programming (yep, a true autodidact) and love weaving AI magic into my creations. 
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## 💡 Favorite Quote
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-> “A jack of all trades is a master of none, but oftentimes better than a master of one.”  
-> *(And I wear that badge proudly!)*
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## 🏍️ Hobbies (a.k.a. Side Quests)
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-- Getting on neighbors nerves while driving my Motorcycle 🏍️
-- Mountain biking & motocross 🚵‍♂️
-- Capturing the world through my lens 📸
-- Building, breaking, and rebuilding code 🧑‍💻
-- Working on anything with an Engine and Wheels 🔧
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## 🌟 Why Work With Me?
-
-Because every project is an adventure, and I bring creativity, curiosity, and a dash of fun to the party! Ready to build something epic together? 🚀
-
----
-
-> Connect with me, challenge me, or just say hi!  
-> I’m always up for a new quest. 🎲✨
-
----
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

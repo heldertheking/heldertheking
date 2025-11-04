@@ -1,104 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
-    <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/MainCss_light.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="javascript/MainJs.js"></script>
-    
-    <title>Website</title>
-
-</head>
-<body>
-    
-    <ul id="navBar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#projectSection">Projects</a></li>
-        <li><a href="#gameSection">Games</a></li>
-        <li><a href="">Images/videos</a></li>
-        <li><a href="">Forums</a></li>
-    </ul> 
-    
-    <div id="navBarPlaceholder"></div>
-    
-    <div class="image_gallery">
-        <img class="img_c1" src="img/pc_1.jpg"> 
-        <img class="img_c1" src="img/pc_2.jpg">
-        <img class="img_c1" src="img/pc_3.jpg">
-        <img class="img_c1" src="img/pc_4.jpg">
-    </div>
-
-  <div class="overlay" id="overlay" onclick="closePopups()"></div>
-
-    <div class="popup" id="popup">
-        <h3>Image</h3>
-        <div id="popupImages" class="popup_images"></div>
-        <p>This is a popup window.</p>
-        <a id="downloadButton" download="image.jpg">
-            <button>Download Image</button>
-        </a>
-        <button onclick="closePopup()">Close</button>
-    </div>
-
-    <div class="popup" id="SettingsPopup">
-        <h3>Settings</h3>
-        <h4>Appearence</h4>
-        <button onclick="changeSettings()" id="light_modes">test</button>
-        <button onclick="closeSettings()" id="Settings-close">Close</button>
-    </div>
-
-    <div class="corners">
-        <img onclick="openSettingsPopup()" class="corBTN" id="settings" src="img/settings.png" alt="settings">
-        <img onclick="reflogin()" class="corBTN" id="account" src="icons/profile.ico" alt="acc">
-    </div>
-
-
-    <!-- Project -->
-    <section id="projectSection">
-        <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/projects.css">
-        <div class="pro-container"> 
-            <div class="projects" id="project1">
-                <div class="titleProject"> <h3>Enigma Stories</h3> </div>
-                <div class="text"> <p> it's a short Riddle Game with a self written story at the end</p> </div>
-                <div class="href"> <a href="Riddles/index.html"> heldertheking.com/Riddles </a> </div>
-            </div>
-
-            <div class="projects" id="project2">
-                <div class="titleProject"> <h3>The Twin Vaults</h3> </div>
-                <div class="text"> <p> Product listing Page</p> </div>
-                <div class="href"> <a href="ttv.heldertheking.com"> ttv.heldertheking.com </a> </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Games -->
-    <section id="gameSection">
-        <link id ="CssStyles" rel="stylesheet" type="text/css" href="Css/game.css">
-        <div class="game-container"> 
-            <div class="games" id="game1">
-                <div class="titleGame"> <h3>Enigma Stories</h3> </div>
-                <div class="text"> <p> it's a short Riddle Game with a self written story at the end</p> </div>
-                <div class="href"> <a href="Riddles/index.html"> heldertheking.com/Riddles </a> </div>
-            </div>
-            <div class="games" id="game2">
-                <div class="titleGame"> <h3>TicTacTie</h3> </div>
-                <div class="text"> <p> it's a selfmade HTML, CSS, Javascript TicTacToe</p> </div>
-                <div class="href"> <a href="games/TicTacToe/index.html"> heldertheking.com/TicTacToe </a> </div>
-            </div>
-            <div class="games" id="game3">
-                <div class="titleGame"> <h3>Tetris</h3> </div>
-                <div calss="text"> <p> it's a selfmade HTML, CSS, Javascript Tetris clone</p> </div>
-                <div class="href"> <a href="games/tetris/index.html"> heldertheking.com/games/tetris </a> </div>
-            </div>
-            <div class="games" id="game4">
-                <div class="titleGame"> <h3>2048</h3> </div>
-                <div class="text"> <p> A simple clone of the game 2048</p> </div>
-                <div class="href"> <a href="games/2048/index.html"> heldertheking.com/TicTacToe </a> </div>
-            </div>
-    
-        </div>
-    </section>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>heldertheking</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
