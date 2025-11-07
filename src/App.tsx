@@ -1,5 +1,6 @@
-import { BrowserRouter, useRoutes } from 'react-router-dom';
-import { routes } from './routes';
+import {BrowserRouter, useRoutes} from 'react-router-dom';
+import {routes} from './routes';
+import Navigation from "./components/Navigation.tsx";
 
 function AppRoutes() {
   return useRoutes(routes);
@@ -8,7 +9,12 @@ function AppRoutes() {
 function App() {
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <div className="flex flex-col min-h-screen w-screen">
+        <Navigation />
+        <main className="block flex-1 max-h-screen justify-center items-center w-full p-16">
+          <AppRoutes />
+        </main>
+      </div>
     </BrowserRouter>
   );
 }
