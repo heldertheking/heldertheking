@@ -1,6 +1,5 @@
-import type { RouteObject } from 'react-router-dom';
-import {BioPage, LandingPage, SkillsPage, ResumePage} from "../pages";
-import ProjectsPage from "../pages/ProjectsPage.tsx";
+import type {RouteObject} from 'react-router-dom';
+import {BioPage, ContactPage, LandingPage, NotFoundPage, ProjectsPage, ResumePage, SkillsPage} from "../pages";
 
 // Define your routes here (similar to Angular's routing module)
 export const routes: RouteObject[] = [
@@ -23,6 +22,14 @@ export const routes: RouteObject[] = [
     {
         path: '/projects',
         element: <ProjectsPage></ProjectsPage>
+    },
+    {
+        path: '/contact',
+        element: <ContactPage></ContactPage>
+    },
+    {
+        path: '*',
+        element: <NotFoundPage></NotFoundPage>
     }
 ];
 

@@ -3,5 +3,8 @@ import LandingPage from './LandingPage';
 import BioPage from "./about_me/BioPage.tsx";
 import SkillsPage from "./about_me/SkillsPage.tsx";
 import ResumePage from "./about_me/ResumePage.tsx";
+import ContactPage from "./ContactPage.tsx";
+import ProjectsPage from "./ProjectsPage.tsx";
+import NotFoundPage from "./NotFoundPage.tsx";
 
-export { LandingPage, BioPage, SkillsPage, ResumePage };
+export { LandingPage, BioPage, SkillsPage, ResumePage, ContactPage, ProjectsPage, NotFoundPage };
