@@ -2,5 +2,6 @@
 import {useNavigationItem} from "./useNavigationItem.tsx";
 import {useSkillMapConfig} from "./useSkillMapConfig.tsx";
 import {useProjectConfig} from "./useProjectConfig.tsx";
+import {useCliCommands} from "./useCliCommands.tsx";
 
-export {useNavigationItem, useSkillMapConfig, useProjectConfig};
+export {useNavigationItem, useSkillMapConfig, useProjectConfig, useCliCommands};

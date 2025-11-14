@@ -15,7 +15,7 @@ const Navigation: React.FC = () => {
     };
 
     return (
-        <nav className="navigation fixed top-0 left-0 w-full z-50 bg-white shadow">
+        <nav className="navigation w-full z-50 bg-white shadow">
             <ul style={{display: "flex", gap: "1rem", listStyle: "none", padding: "6px"}}>
                 {items.map((item, index) => {
                     if (index === 0) {

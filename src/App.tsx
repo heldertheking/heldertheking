@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="flex flex-col min-h-screen w-screen">
         <Navigation />
-        <main className="block flex-1 max-h-screen justify-center items-center w-full p-16 overflow-auto">
+        <main className="flex flex-1 max-h-screen w-full p-16 pt-8 pb-8 overflow-auto">
           <AppRoutes />
         </main>
       </div>

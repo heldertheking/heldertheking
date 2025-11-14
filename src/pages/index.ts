@@ -6,5 +6,6 @@ import ResumePage from "./about_me/ResumePage.tsx";
 import ContactPage from "./ContactPage.tsx";
 import ProjectsPage from "./ProjectsPage.tsx";
 import NotFoundPage from "./NotFoundPage.tsx";
+import CliPage from "./other/CliPage.tsx";
 
-export { LandingPage, BioPage, SkillsPage, ResumePage, ContactPage, ProjectsPage, NotFoundPage };
+export { LandingPage, BioPage, SkillsPage, ResumePage, ContactPage, ProjectsPage, NotFoundPage, CliPage};

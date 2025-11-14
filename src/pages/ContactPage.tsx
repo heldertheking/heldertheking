@@ -39,7 +39,7 @@ const ContactPage: React.FC = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <div className="flex flex-col items-center justify-center w-full flex-1">
             <h1 className="text-3xl mb-6">Contact Me</h1>
             <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-6 rounded shadow-md">
                 <div className="mb-4">
@@ -89,7 +89,7 @@ const ContactPage: React.FC = () => {
                 >
                     Send Message
                 </button>
-                {status && <p className="mt-4 text-center">{status}</p>}
+                {status && <p className="mt-4 text-center animate-fade-in">{status}</p>}
             </form>
         </div>
     );

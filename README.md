@@ -43,11 +43,7 @@ I taught myself programming (yep, a true autodidact) and love weaving AI magic i
 
 Because every project is an adventure, and I bring creativity, curiosity, and a dash of fun to the party! Ready to build something epic together? 🚀
 
----
+## 📬 Let’s Connect!
 
 > Connect with me, challenge me, or just say hi!  
 > I’m always up for a new quest. 🎲✨
-
----
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)

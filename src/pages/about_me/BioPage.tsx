@@ -17,7 +17,7 @@ const BioPage: React.FC = () => {
     }
     return (
         <div className="flex flex-col items-center min-h-full w-full max-w-[70vw] mx-auto overflow-auto">
-            <div className="h-fit markdown-body">
+            <div className="h-fit markdown-body p-8">
                 <ReactMarkdown>
                     {bio}
                 </ReactMarkdown>

@@ -18,7 +18,6 @@ export function useBio(username: string, repo: string = username) {
                 }
 
                 const text = await response.text();
-                console.log(text)
                 setBio(text);
             } catch (err: any) {
                 setError(err.message);
