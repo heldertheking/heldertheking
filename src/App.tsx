@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen w-screen">
-        <Navigation />
+          <Navigation></Navigation>
         <main className="flex flex-1 max-h-screen w-full p-16 pt-8 pb-8 overflow-auto">
           <AppRoutes />
         </main>

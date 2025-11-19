@@ -1,6 +1,3 @@
-import type {NavigationItem} from "./NavigationConfig";
-import {navigationConfig} from "./NavigationConfig";
-
 export interface CliCommand {
     name: string;
     description: string;
@@ -146,32 +143,33 @@ export const commands: CliCommand[] = [
     {
         name: "navigate",
         description: "Navigate to a page",
-        execute: (args, _location) => {
-            const page = args[0];
-            if (!page) {
-                return {output: ["navigate: missing page argument"]};
-            }
-
-            // Helper to recursively search navigationConfig
-            function findUrl(items: NavigationItem[], page: string): string | undefined {
-                for (const item of items) {
-                    if (item.title.toLowerCase() === page.toLowerCase() && item.url) {
-                        return item.url;
-                    }
-                    if (item.children) {
-                        const childUrl = findUrl(item.children, page);
-                        if (childUrl) return childUrl;
-                    }
-                }
-                return undefined;
-            }
-
-            const url = findUrl(navigationConfig, page);
-            if (url) {
-                return {output: [`Navigating to ${page} (${url})`], location: url};
-            } else {
-                return {output: [`navigate: page '${page}' not found`]};
-            }
+        execute: (_args, _location) => {
+            // const page = args[0];
+            // if (!page) {
+            //     return {output: ["navigate: missing page argument"]};
+            // }
+            //
+            // // Helper to recursively search navigationConfig
+            // function findUrl(items: NavigationItem[], page: string): string | undefined {
+            //     for (const item of items) {
+            //         if (item.title.toLowerCase() === page.toLowerCase() && item.url) {
+            //             return item.url;
+            //         }
+            //         if (item.children) {
+            //             const childUrl = findUrl(item.children, page);
+            //             if (childUrl) return childUrl;
+            //         }
+            //     }
+            //     return undefined;
+            // }
+            //
+            // const url = findUrl(navigationConfig, page);
+            // if (url) {
+            //     return {output: [`Navigating to ${page} (${url})`], location: url};
+            // } else {
+            //     return {output: [`navigate: page '${page}' not found`]};
+            // }
+            return {output: ["Navigation via terminal is disabled. Please use the web interface to navigate."]};
         }
     },
     {
